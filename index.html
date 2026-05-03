@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Key Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Key Generator</h1>
+
+    <div class="form-group">
+      <label for="prefix">Prefix (Optional)</label>
+      <input type="text" id="prefix" placeholder="e.g., API_KEY_">
+    </div>
+
+    <div class="form-group">
+      <label for="keyType">Key Type</label>
+      <select id="keyType">
+        <option value="alphanumeric">Alphanumeric</option>
+        <option value="numeric">Numeric</option>
+        <option value="hex">Hexadecimal</option>
+        <option value="alpha">Alphabetic</option>
+        <option value="uuid">UUID v4</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="length">Key Length</label>
+      <input type="number" id="length" value="16" min="1" max="1000">
+    </div>
+
+    <button id="generateBtn">Generate Key</button>
+
+    <div id="output" class="output">
+      <div class="output-label">Generated Key</div>
+      <div class="output-value" id="outputValue"></div>
+      <button id="copyBtn" class="copy-btn">Copy Key</button>
+    </div>
+
+    <div id="message" class="message"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
