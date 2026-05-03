@@ -1,2 +1,2 @@
 # Key-Generator
-A strong key generator.
+A  very strong css key generator.
