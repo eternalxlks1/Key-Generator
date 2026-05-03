@@ -1,0 +1,225 @@
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+  font-family: 'Courier New', monospace;
+  background: linear-gradient(135deg, #0f0f1e 0%, #1a0033 100%);
+  color: #00ff00;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid rgba(0, 255, 0, 0.5);
+  border-radius: 15px;
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 0 40px rgba(0, 255, 0, 0.3);
+}
+
+/* =========================
+   TITLE
+========================= */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+  font-size: 2.5em;
+  letter-spacing: 3px;
+}
+
+/* =========================
+   FORM GROUP
+========================= */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #00ff00;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.4);
+}
+
+/* =========================
+   INPUT
+========================= */
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 12px;
+  background: rgba(0, 255, 0, 0.05);
+  border: 1px solid rgba(0, 255, 0, 0.5);
+  border-radius: 8px;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  outline: none;
+  background: rgba(0, 255, 0, 0.1);
+  border: 1px solid rgba(0, 255, 0, 0.9);
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+/* =========================
+   BUTTON
+========================= */
+button {
+  width: 100%;
+  padding: 14px;
+  background: rgba(0, 255, 0, 0.1);
+  border: 2px solid rgba(0, 255, 0, 0.7);
+  border-radius: 8px;
+  color: #00ff00;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
+
+button:hover {
+  background: rgba(0, 255, 0, 0.2);
+  border: 2px solid rgba(0, 255, 0, 0.9);
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.6);
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* =========================
+   OUTPUT
+========================= */
+.output {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(0, 255, 0, 0.05);
+  border: 1px solid rgba(0, 255, 0, 0.5);
+  border-radius: 8px;
+  display: none;
+}
+
+.output.show {
+  display: block;
+  animation: slideIn 0.4s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.output-label {
+  font-size: 12px;
+  color: #00aa00;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.output-value {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 12px;
+  border: 1px solid rgba(0, 255, 0, 0.3);
+  border-radius: 5px;
+  word-break: break-all;
+  font-size: 14px;
+  color: #00ff00;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.4);
+}
+
+/* =========================
+   COPY BUTTON
+========================= */
+.copy-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* =========================
+   MESSAGE
+========================= */
+.message {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 5px;
+  text-align: center;
+  display: none;
+  font-weight: bold;
+}
+
+.message.show {
+  display: block;
+}
+
+.message.success {
+  background: rgba(0, 255, 0, 0.1);
+  border: 1px solid rgba(0, 255, 0, 0.5);
+  color: #00ff00;
+}
+
+.message.error {
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid rgba(255, 0, 0, 0.5);
+  color: #ff0000;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+  .container {
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
